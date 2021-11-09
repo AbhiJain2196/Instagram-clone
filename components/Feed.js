@@ -1,15 +1,8 @@
-//import Posts from "./Posts";
+import Posts from "./Posts";
 import Stories from "./Stories";
 import MiniProfile from "./MiniProfile";
 import Suggestions from "./Suggestions";
 import { useSession } from "next-auth/react";
-import dynamic from "next/dynamic";
-const Posts = dynamic(
-  () => {
-    return import("../components/Posts");
-  },
-  { ssr: false }
-);
 
 function Feed() {
   const { data: session } = useSession();
@@ -23,9 +16,7 @@ function Feed() {
         {/* Stories */}
         <Stories />
         {/* Post */}
-        <div>
-          <Posts />
-        </div>
+        <Posts />
       </section>
 
       {session && (

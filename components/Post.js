@@ -131,7 +131,7 @@ function Post({ id, username, userImg, img, caption }) {
       {/* Comments */}
       {comments.length > 0 && (
         <div className="ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
-          {comments.map((comment) => {
+          {comments.map((comment) => (
             <div key={comment.id} className="flex items-center space-x-2 mb-3">
               <img
                 className="h-7 rounded-full"
@@ -145,8 +145,8 @@ function Post({ id, username, userImg, img, caption }) {
               <Moment fromNow className="pr-5 text-xs">
                 {comment.data().timestamp?.toDate()}
               </Moment>
-            </div>;
-          })}
+            </div>
+          ))}
         </div>
       )}
 

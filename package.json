@@ -1,9 +1,11 @@
 {
   "private": true,
+  "main":"server.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy":"firebase deploy --only functions,hosting"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -11,6 +13,7 @@
     "@tailwindcss/forms": "^0.3.4",
     "faker": "^5.5.3",
     "firebase": "^9.2.0",
+    "firebase-functions": "^3.16.0",
     "moment": "^2.29.1",
     "next": "^12.0.1",
     "next-auth": "4.0.0-beta.6",

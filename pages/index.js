@@ -1,15 +1,8 @@
 import Head from "next/head";
 import Feed from "../components/Feed";
 import Header from "../components/Header";
-//import Modal from "../components/Modal";
-import dynamic from "next/dynamic";
+import Modal from "../components/Modal";
 
-const Modal = dynamic(
-  () => {
-    return import("../components/Modal");
-  },
-  { ssr: false }
-);
 
 export default function Home() {
   return (
@@ -24,9 +17,7 @@ export default function Home() {
 
       <Header />
       <Feed />
-      <div>
-        <Modal />
-      </div>
+      <Modal />
     </div>
   );
 }
